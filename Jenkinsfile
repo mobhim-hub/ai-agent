@@ -4,10 +4,12 @@ pipeline {
     environment {
         NODE_VERSION = 'Node 22.17.0' // Use the correct Node.js version you have installed
     }
-
+  
     tools {
         nodejs "${NODE_VERSION}" // Use NodeJS installation configured in Jenkins
     }
+     
+    
 
     stages {
         stage('Checkout Code') {
@@ -21,6 +23,12 @@ pipeline {
             steps {
                 // Install all dependencies including Tailwind CSS
                 sh 'npm install'
+            }
+        }
+         stage('hold') {
+            steps {
+                // sleeping
+                 echo 'hello ehjaskdlfjklajf'
             }
         }
 
