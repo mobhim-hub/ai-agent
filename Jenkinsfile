@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        NODE_VERSION = 'Node 22.17.0' // Adjust based on your app
+        NODE_VERSION = 'Node 22.17.0' // Use the correct version
     }
 
     tools {
@@ -25,12 +25,15 @@ pipeline {
         stage('Build React App') {
             steps {
                 sh 'npm run build'
+                // Debugging step to list the directory contents
+                sh 'ls -al dist'  // Check if 'dist' folder is created and has files
             }
         }
 
         stage('Archive Build Artifacts') {
             steps {
-                archiveArtifacts artifacts: 'build/**', fingerprint: true
+                // Update to use 'dist/**' instead of 'build/**'
+                archiveArtifacts artifacts: 'dist/**', fingerprint: true
             }
         }
     }
