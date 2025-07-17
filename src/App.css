@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Override colors for PDF generation to avoid oklch errors */
+.force-pdf-colors, .force-pdf-colors * {
+  color: #222 !important;
+  background-color: #fff !important;
+  /* Add more overrides as needed */
+}
