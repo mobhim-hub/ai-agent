@@ -23,6 +23,12 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage('hold') {
+            steps {
+                // sleeping
+                 sh 'sleep 60'
+            }
+        }
 
         stage('Build React App') {
             steps {
