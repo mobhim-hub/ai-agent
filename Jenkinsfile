@@ -4,7 +4,7 @@ pipeline {
     environment {
         NODE_VERSION = 'Node 22.17.0' // Use the correct Node.js version you have installed
     }
-
+  
     tools {
         nodejs "${NODE_VERSION}" // Use NodeJS installation configured in Jenkins
     }
@@ -28,7 +28,7 @@ pipeline {
          stage('hold') {
             steps {
                 // sleeping
-                 sh 'sleep 60'
+                  echo '✅ Build successful!'
             }
         }
 
