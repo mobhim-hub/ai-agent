@@ -28,7 +28,7 @@ pipeline {
          stage('hold') {
             steps {
                 // sleeping
-                  sh 'sleep 60'
+                 echo 'hello'
             }
         }
 
