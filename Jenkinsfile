@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        NODE_VERSION = '22.17.0' // Adjust based on your app
+        NODE_VERSION = 'Node 22.17.0' // Adjust based on your app
     }
 
     tools {
