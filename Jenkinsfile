@@ -9,6 +9,8 @@ pipeline {
         nodejs "${NODE_VERSION}" // Use NodeJS installation configured in Jenkins
     }
 
+    
+
     stages {
         stage('Checkout Code') {
             steps {
