@@ -28,7 +28,7 @@ pipeline {
          stage('hold') {
             steps {
                 // sleeping
-                  echo '✅ Build successful!'
+                  sh 'sleep 60'
             }
         }
 
